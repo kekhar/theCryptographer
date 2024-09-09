@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Шифрование и Расшифровка</title>
+    <link rel="stylesheet" href="./src/css/style.css" />
+    <script src="./src/js/script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h1 class="title">Основа шифра Цезаря</h1>
+    </header>
+    <div class="wrapper__window">
+      <div class="half-section">
+        <div class="encrypt-box">
+          <textarea
+            id="plainMessage"
+            placeholder="Введите текст для шифрования..."
+          ></textarea>
+          <div class="input-group">
+            <input
+              type="number"
+              id="shiftEncrypt"
+              placeholder="Сдвиг (ключ)"
+              min="1"
+            />
+          </div>
+        </div>
+        <div class="result-box">
+          <textarea
+            id="encryptedMessage"
+            readonly
+            placeholder="Зашифрованное сообщение..."
+          ></textarea>
+          <button onclick="updateEncryptedMessage()">Зашифровать</button>
+        </div>
+      </div>
+      <div class="half-section">
+        <div class="decrypt-box">
+          <textarea
+            id="cipherMessage"
+            placeholder="Введите зашифрованный текст..."
+          ></textarea>
+          <div class="input-group">
+            <input
+              type="number"
+              id="shiftDecrypt"
+              placeholder="Сдвиг (ключ)"
+              min="1"
+            />
+          </div>
+        </div>
+        <div class="result-box">
+          <textarea
+            id="decryptedMessage"
+            readonly
+            placeholder="Расшифрованное сообщение..."
+          ></textarea>
+          <button onclick="updateDecryptedMessage()">Расшифровать</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
